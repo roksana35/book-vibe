@@ -1,11 +1,18 @@
+import { useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
+import { saveToLocalData } from "../Utils/Localstorage";
+
 
 
 const Bookdeatils = () => {
+    
     const books=useLoaderData();
     const {bookId}=useParams();
     const book = books.find(book => book.bookId ===bookId)
     console.log(book)
+    const handleReadBook =()=>{
+        saveToLocalData(book)
+    }
 
     return (
         <div className="mt-5">
@@ -51,7 +58,7 @@ const Bookdeatils = () => {
 </div>
     
     <div className="card-actions justify-start">
-      <button className="btn bg-green-500 text-white font-bold">Read</button>
+      <button onClick={handleReadBook} className="btn bg-green-500 text-white font-bold">Read</button>
       <button className="btn bg-sky-500 text-white font-bold">Wishlist</button>
     </div>
   </div>

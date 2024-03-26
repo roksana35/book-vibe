@@ -1,5 +1,6 @@
 import { FaRegStar } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 const Card = ({card}) => {
     // console.log(card)
@@ -29,5 +30,8 @@ const Card = ({card}) => {
     );
 };
 
+Card.propTypes={
+    card:PropTypes.object.isRequired,
+}
 export default Card;
 
