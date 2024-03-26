@@ -2,7 +2,7 @@ import { FaRegStar } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const Card = ({card}) => {
-    console.log(card)
+    // console.log(card)
     const {author,bookId,bookName,category,image,publisher,rating,review,tags}=card;
     return (
         
