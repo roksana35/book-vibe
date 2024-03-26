@@ -8,15 +8,21 @@ import {
 } from "react-router-dom";
 import Root from './Components/Root/Root.jsx';
 import Home from './Components/Home/Home.jsx';
+import Errorpage from './Components/Errorpage/Errorpage.jsx';
+
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement:<Errorpage></Errorpage>,
     children:[
       {
         path:"/",
-        element:<Home></Home>
-      }
+        element:<Home></Home>,
+        loader:()=>fetch('/public/cards.json')
+
+      },
+      
     ]
   },
 ]);
