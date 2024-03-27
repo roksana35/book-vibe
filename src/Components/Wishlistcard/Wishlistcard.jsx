@@ -1,9 +1,8 @@
 import { SlLocationPin } from "react-icons/sl";
 import PropTypes from 'prop-types';
 
-
-const Bookdata = ({data}) => {
-    const {bookName,author,tags,publisher,totalPages,category,rating,image,yearOfPublishing}=data;
+const Wishlistcard = ({wish}) => {
+    const {bookName,author,tags,publisher,totalPages,category,rating,image,yearOfPublishing}=wish;
     return (
         <div className="card lg:card-side bg-base-100 shadow-xl space-y-3"> 
   <figure><img src={image} className="lg:w-[400px] lg:h-[300px] ml-2 rounded-lg" alt="Album"/></figure>
@@ -30,7 +29,8 @@ const Bookdata = ({data}) => {
 </div>
     );
 };
-Bookdata.propTypes={
-      data:PropTypes.object.isRequired
+
+Wishlistcard.propTypes={
+    wish:PropTypes.object.isRequired
 }
-export default Bookdata;
+export default Wishlistcard;

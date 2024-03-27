@@ -1,6 +1,6 @@
-import { useState } from "react";
+
 import { useLoaderData, useParams } from "react-router-dom";
-import { saveToLocalData } from "../Utils/Localstorage";
+import { saveLocalStorageData, saveToLocalData } from "../Utils/Localstorage";
 
 
 
@@ -12,6 +12,9 @@ const Bookdeatils = () => {
     console.log(book)
     const handleReadBook =()=>{
         saveToLocalData(book)
+    }
+    const handleWishlistBook=()=>{
+        saveLocalStorageData(book)
     }
 
     return (
@@ -59,7 +62,7 @@ const Bookdeatils = () => {
     
     <div className="card-actions justify-start">
       <button onClick={handleReadBook} className="btn bg-green-500 text-white font-bold">Read</button>
-      <button className="btn bg-sky-500 text-white font-bold">Wishlist</button>
+      <button onClick={handleWishlistBook} className="btn bg-sky-500 text-white font-bold">Wishlist</button>
     </div>
   </div>
 </div>

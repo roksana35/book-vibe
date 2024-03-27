@@ -1,17 +1,14 @@
-import { useEffect, useState } from "react";
-import { getDataFromLocal } from "../Utils/Localstorage";
-import Bookdata from "../Bookdata/Bookdata";
+import {  useState } from "react";
+
+
+import { Link, Outlet } from "react-router-dom";
 
 
 const Listbook = () => {
-    const [booklist,setBooklist]=useState([])
-    useEffect(()=>{
-        const bookData=getDataFromLocal();
-        setBooklist(bookData)
-        
-        
-    },[])
-    console.log(booklist)
+    
+    const [tabindex,SetTabindex]=useState(0);
+    
+    
     return (
         <div className="mt-10 p-4">
             <div className="dropdown dropdown-bottom">
@@ -22,21 +19,26 @@ const Listbook = () => {
   </ul>
 </div>
             {/* add tab */}
-            <div role="tablist" className="tabs tabs-lifted">
-  <input type="radio" name="my_tabs_2" role="tab" className="tab" aria-label="Read Books" />
-  <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-6">Tab content 1</div>
-
-  <input type="radio" name="my_tabs_2" role="tab" className="tab" aria-label="Wishlist books" checked />
-  <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-6">Tab content 2</div>
-
-  
+            <div className="flex items-center -mx-4 overflow-x-auto overflow-y-hidden sm:justify-start flex-nowrap dark:bg-gray-100 dark:text-gray-800">
+	<Link onClick={()=>{SetTabindex(0)}} to="" className={`flex items-center flex-shrink-0 px-5 py-3 space-x-2 ${tabindex ===0?"border border-b-0":" border-b"} dark:border-gray-600 dark:text-gray-600`}>
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
+			<path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+		</svg>
+		<span>Read Books</span>
+	</Link>
+	<Link to="wishlist" onClick={()=>{SetTabindex(1)}} className={`flex items-center flex-shrink-0 px-5 py-3 space-x-2 ${tabindex ===1?"border border-b-0":" border-b"} dark:border-gray-600 dark:text-gray-600`}>
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
+			<path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+			<path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+		</svg>
+		<span>Wishlist Books</span>
+	</Link>
+	
+	
 </div>
 {/* card */}
-<div className="grid grid-cols-1 gap-4 mt-3 ">
-{
-    booklist.map(data=><Bookdata key={data.bookId} data={data}></Bookdata>)
-}
-</div>
+<Outlet></Outlet>
+
 
 
         </div>
