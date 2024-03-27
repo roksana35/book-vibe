@@ -5,10 +5,10 @@ import Navbar from "../Navbar/Navbar";
 const Root = () => {
     return (
         <div>
-            <div className="h-16">
+            <div className="h-16 lg:p-4">
             <Navbar></Navbar>
             </div>
-            <div className="min-h-[calc(100vh-64px)]">
+            <div className="min-h-[calc(100vh-64px)] lg:p-4">
             <Outlet></Outlet>
             </div>
         </div>
