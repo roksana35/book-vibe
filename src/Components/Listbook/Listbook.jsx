@@ -10,7 +10,7 @@ const Listbook = () => {
     
     
     return (
-        <div className="mt-10 p-4">
+        <div className="mt-10 p-2 lg:p-4">
             <div className="dropdown dropdown-bottom">
   <div tabIndex={0} role="button" className="btn m-1">Click</div>
   <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">

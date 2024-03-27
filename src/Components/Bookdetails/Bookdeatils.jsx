@@ -18,10 +18,10 @@ const Bookdeatils = () => {
     }
 
     return (
-        <div className="mt-5">
+        <div className="mt-3 lg:mt-5 p-3">
             <h2 className="text-2xl font-bold text-black text-center">Book</h2>
-            <div className="card lg:card-side bg-base-100 shadow-xl">
-  <figure><img src={book.image} className="lg:w-[500px] h-[450px] rounded-lg"  alt="Album"/></figure>
+            <div className="card mt-3 lg:card-side bg-base-100 shadow-xl">
+  <figure><img src={book.image} className="lg:w-[500px] lg:h-[450px] rounded-lg"  alt="Album"/></figure>
   <div className="card-body">
     <h2 className="card-title">{book.bookName}</h2>
     <p>{book.author}</p>

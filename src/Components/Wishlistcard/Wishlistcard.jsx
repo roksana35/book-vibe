@@ -1,8 +1,12 @@
 import { SlLocationPin } from "react-icons/sl";
 import PropTypes from 'prop-types';
 
+
 const Wishlistcard = ({wish}) => {
     const {bookName,author,tags,publisher,totalPages,category,rating,image,yearOfPublishing}=wish;
+    const handleBackToBookDetails=()=>{
+        console.log('clicked');
+    };
     return (
         <div className="card lg:card-side bg-base-100 shadow-xl space-y-3"> 
   <figure><img src={image} className="lg:w-[400px] lg:h-[300px] ml-2 rounded-lg" alt="Album"/></figure>
@@ -23,7 +27,7 @@ const Wishlistcard = ({wish}) => {
     <div className="card-actions flex gap-4">
         <span className=" text-sky-600 bg-sky-100 p-2 rounded-xl ">Category: {category}</span>
         <span className=" text-orange-400 bg-orange-100 p-2 rounded-xl ">Rating: {rating}</span>
-      <button className="rounded-2xl bg-green-600 p-2 text-white font-semibold ">View Details</button>
+       <button onClick={handleBackToBookDetails}  className="rounded-2xl bg-green-600 p-2 text-white font-semibold ">View Details</button>
     </div>
   </div>
 </div>
