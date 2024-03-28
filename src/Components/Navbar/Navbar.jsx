@@ -15,6 +15,8 @@ const Navbar = () => {
       <NavLink exact to="/" className={({isActive})=> isActive?'text-green-500 font-bold ':'font-bold '}>Home</NavLink>
       <NavLink to="/listedbooks" className={({isActive})=> isActive?'text-green-500 font-bold ':'font-bold '}>Listed Books</NavLink>
       <NavLink to="/pagesread" className={({isActive})=> isActive?'text-green-500 font-bold ':'font-bold '}>Pages to Read</NavLink>
+      <NavLink to="/blog" className={({isActive})=> isActive?'text-green-500 font-bold ':'font-bold '}>Blog</NavLink>
+      <NavLink to="/contact" className={({isActive})=> isActive?'text-green-500 font-bold ':'font-bold '}>Contact</NavLink>
       </ul>
     </div>
     <a className="btn btn-ghost text-2xl lg:text-3xl font-bold">Book Vibe</a>
@@ -24,6 +26,8 @@ const Navbar = () => {
     <NavLink exact to="/" className={({isActive})=> isActive?'text-green-500 font-bold ':'font-bold '}>Home</NavLink>
     <NavLink to="/listedbooks" className={({isActive})=> isActive?'text-green-500 font-bold ':'font-bold '}>Listed Books</NavLink>
     <NavLink to="/pagesread" className={({isActive})=> isActive?'text-green-500 font-bold ':'font-bold '}>Pages to Read</NavLink>
+    <NavLink to="/blog" className={({isActive})=> isActive?'text-green-500 font-bold ':'font-bold '}>Blog</NavLink>
+      <NavLink to="/contact" className={({isActive})=> isActive?'text-green-500 font-bold ':'font-bold '}>Contact</NavLink>
     </ul>
   </div>
   <div className="navbar-end mr-2">

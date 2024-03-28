@@ -15,6 +15,10 @@ import Bookdeatils from './Components/Bookdetails/Bookdeatils.jsx';
 import Read from './Components/Read/Read.jsx';
 import Wishlist from './Components/Wishlist/Wishlist.jsx';
 
+import { ToastContainer, toast } from 'react-toastify';
+import Blog from './Components/Blog/Blog.jsx';
+import Contact from './Components/Contact/Contact.jsx';
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -46,6 +50,15 @@ const router = createBrowserRouter([
         element:<Readpage></Readpage>
       },
       {
+        path:"/blog",
+        element:<Blog></Blog>
+      },
+      {
+        path:"/contact",
+        element:<Contact></Contact>
+      },
+
+      {
         path:"/card/:bookId",
         element:<Bookdeatils></Bookdeatils>,
         loader:()=>fetch('../public/cards.json')
@@ -59,5 +72,6 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
      <RouterProvider router={router} />
+     <ToastContainer />
   </React.StrictMode>,
 )

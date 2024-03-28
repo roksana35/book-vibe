@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from 'react';
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, ResponsiveContainer} from 'recharts'
+import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, } from 'recharts'
 import { getDataFromLocal } from '../Utils/Localstorage';
 
 

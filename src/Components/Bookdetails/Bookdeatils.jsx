@@ -1,6 +1,6 @@
 
 import { useLoaderData, useParams } from "react-router-dom";
-import { saveLocalStorageData, saveToLocalData } from "../Utils/Localstorage";
+import { saveLocalStorageData, saveToLocalData,  } from "../Utils/Localstorage";
 
 
 
