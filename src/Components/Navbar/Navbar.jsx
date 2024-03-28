@@ -15,7 +15,7 @@ const Navbar = () => {
       <NavLink exact to="/" className={({isActive})=> isActive?'text-green-500 font-bold ':'font-bold '}>Home</NavLink>
       <NavLink to="/listedbooks" className={({isActive})=> isActive?'text-green-500 font-bold ':'font-bold '}>Listed Books</NavLink>
       <NavLink to="/pagesread" className={({isActive})=> isActive?'text-green-500 font-bold ':'font-bold '}>Pages to Read</NavLink>
-      <NavLink to="/blog" className={({isActive})=> isActive?'text-green-500 font-bold ':'font-bold '}>Blog</NavLink>
+      <NavLink to="/category" className={({isActive})=> isActive?'text-green-500 font-bold ':'font-bold '}>Category</NavLink>
       <NavLink to="/contact" className={({isActive})=> isActive?'text-green-500 font-bold ':'font-bold '}>Contact</NavLink>
       </ul>
     </div>
@@ -26,12 +26,12 @@ const Navbar = () => {
     <NavLink exact to="/" className={({isActive})=> isActive?'text-green-500 font-bold ':'font-bold '}>Home</NavLink>
     <NavLink to="/listedbooks" className={({isActive})=> isActive?'text-green-500 font-bold ':'font-bold '}>Listed Books</NavLink>
     <NavLink to="/pagesread" className={({isActive})=> isActive?'text-green-500 font-bold ':'font-bold '}>Pages to Read</NavLink>
-    <NavLink to="/blog" className={({isActive})=> isActive?'text-green-500 font-bold ':'font-bold '}>Blog</NavLink>
+    <NavLink to="/category" className={({isActive})=> isActive?'text-green-500 font-bold ':'font-bold '}>Category</NavLink>
       <NavLink to="/contact" className={({isActive})=> isActive?'text-green-500 font-bold ':'font-bold '}>Contact</NavLink>
     </ul>
   </div>
-  <div className="navbar-end mr-2">
-    <button className="btn bg-green-500 px-2 py-1 lg:px-4 lg:py-2 rounded-lg text-white mr-4">Sign In</button>
+  <div className="navbar-end ml-3 lg:mr-2">
+    <button className="btn bg-green-500 px-1 py-1 lg:px-4 lg:py-2 rounded-lg text-white mr-2 lg:mr-4">Sign In</button>
     <button className="btn bg-sky-400 px-2 py-1 lg:px-4 lg:py-2 rounded-lg text-white">Sign Up</button>
   </div>
 </div>

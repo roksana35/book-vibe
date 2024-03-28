@@ -72,7 +72,7 @@ const Readpage = () => {
 
 
     return (
-      <div className=' lg:max-w-7xl mx-auto lg:mt-5'>
+      <div className='lg:ml-60 lg:max-w-7xl mx-auto lg:mt-5'>
         
         <BarChart
       width={900}

@@ -14,10 +14,11 @@ import Readpage from './Components/Readpage/Readpage.jsx';
 import Bookdeatils from './Components/Bookdetails/Bookdeatils.jsx';
 import Read from './Components/Read/Read.jsx';
 import Wishlist from './Components/Wishlist/Wishlist.jsx';
-
 import { ToastContainer, toast } from 'react-toastify';
-import Blog from './Components/Blog/Blog.jsx';
+
+import 'react-toastify/dist/ReactToastify.css';
 import Contact from './Components/Contact/Contact.jsx';
+import Category from './Components/Category/Category.jsx';
 
 const router = createBrowserRouter([
   {
@@ -50,8 +51,9 @@ const router = createBrowserRouter([
         element:<Readpage></Readpage>
       },
       {
-        path:"/blog",
-        element:<Blog></Blog>
+        path:"/category",
+        element:<Category></Category>,
+        
       },
       {
         path:"/contact",
@@ -72,6 +74,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
      <RouterProvider router={router} />
-     <ToastContainer />
+     <ToastContainer></ToastContainer>
+     
   </React.StrictMode>,
 )

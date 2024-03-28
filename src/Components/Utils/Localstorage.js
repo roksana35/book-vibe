@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 
 
   
@@ -7,10 +8,10 @@ export const saveToLocalData =(data)=>{
     if(!Existed){
         saveData.push(data);
         localStorage.setItem("read",JSON.stringify(saveData))
-        alert('Added data to read ')
+        toast.success('Added data to read book');
     }
     else{
-        alert('Already data existed')
+        toast.warning('Already data existed');
     }
     
 };
@@ -31,10 +32,10 @@ export const saveLocalStorageData=(data)=>{
     if(!AlreadyExisted && !Existed){
         saveLocalstore.push(data);
         localStorage.setItem("wishlist",JSON.stringify(saveLocalstore))
-        alert('Add to data wishlist successfuly');
+        toast.success('Add to data wishlist successfuly');
     }
     else{
-        alert('Already data Added to read');
+        toast.warning('Already data Added to read');
     }
 };
 export const getDataLocalStorage=()=>{

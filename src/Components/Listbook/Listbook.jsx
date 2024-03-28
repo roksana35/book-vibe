@@ -11,13 +11,7 @@ const Listbook = () => {
     
     return (
         <div className="mt-10 p-2 lg:p-4">
-            <div className="dropdown dropdown-bottom">
-  <div tabIndex={0} role="button" className="btn m-1">Click</div>
-  <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-    <li><a>Item 1</a></li>
-    <li><a>Item 2</a></li>
-  </ul>
-</div>
+            
             {/* add tab */}
             <div className="flex items-center -mx-4 overflow-x-auto overflow-y-hidden sm:justify-start flex-nowrap dark:bg-gray-100 dark:text-gray-800">
 	<Link onClick={()=>{SetTabindex(0)}} to="" className={`flex items-center flex-shrink-0 px-5 py-3 space-x-2 ${tabindex ===0?"border border-b-0":" border-b"} dark:border-gray-600 dark:text-gray-600`}>
